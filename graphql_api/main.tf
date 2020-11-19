@@ -27,14 +27,20 @@ resource "aws_appsync_graphql_api" "quiz_gql_api" {
   name                = "QuizApp API"
   schema = <<EOF
 type Question {
-    id: ID!
-    text: String!
-    explanation: String
-    answers: [AWSJSON]
+  id: ID!
+  text: String!
+  explanation: String
+  answers: [AWSJSON]
+}
+
+type PaginatedQuestions {
+  nextToken: String
+  items: [Question]
 }
 
 type Query {
   getQuestion(id: ID!): Question
+  listQuestions(limit: Int, nextToken: String): PaginatedQuestions
 }
 
 input CreateQuestionInput {
@@ -48,7 +54,7 @@ type Mutation {
 }
 EOF
   log_config {
-    cloudwatch_logs_role_arn = aws_iam_role.example.arn
+    cloudwatch_logs_role_arn = aws_iam_role.graphqlapirole.arn
     field_log_level          = "ALL"
   }
 }
