@@ -23,3 +23,17 @@ This project is created to build a quiz app based on AWS App Sync and DynamoDB
 3. npm add lodash async-retry semantic-ui-css semantic-ui-react aws-amplify aws-amplify-react
 
 4. npm run start
+
+### Apmplify Setup
+1. amplify init
+    - Please note that build location, you should pass quizbiz\build instead of build, otherwise publish will fail with error `Cannot find the distribution folder.` Distribution folder is currently set as: D:\Tech\AWSLearning\AWS_AppSync_QuizApp\build
+    
+2. cd quizbiz
+3. amplify status
+4. amplify hosting add
+5. amplify publish
+
+#### API setup
+1. amplify api add
+    - please select  Do you want to configure advanced settings for the GraphQL API Yes and then in further question provide schema file name with path.
+2. 
