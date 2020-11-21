@@ -24,11 +24,12 @@ This project is created to build a quiz app based on AWS App Sync and DynamoDB
 
 4. npm run start
 
+or 
+Simply download the git hub code and run `npm install`
+
 ### Apmplify Setup
-1. amplify init
-    - Please note that build location, you should pass quizbiz\build instead of build, otherwise publish will fail with error `Cannot find the distribution folder.` Distribution folder is currently set as: D:\Tech\AWSLearning\AWS_AppSync_QuizApp\build
-    
-2. cd quizbiz
+1. cd quizbiz
+2. amplify init
 3. amplify status
 4. amplify hosting add
 5. amplify publish
@@ -36,4 +37,16 @@ This project is created to build a quiz app based on AWS App Sync and DynamoDB
 #### API setup
 1. amplify api add
     - please select  Do you want to configure advanced settings for the GraphQL API Yes and then in further question provide schema file name with path.
-2. 
+2. amplify push
+3. amplify publish
+
+#### Auth Setup
+1. amplify auth add
+2. amplify push
+
+#### Refresh API to use Auth
+1. amplify api update
+
+#### Add Auth into Application
+1. comment out `src/App.js` file part `export default App;`
+2. Uncomment `src/App.js` file part `export default withAuthenticator(App);`
