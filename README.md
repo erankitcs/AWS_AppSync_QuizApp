@@ -50,3 +50,11 @@ Simply download the git hub code and run `npm install`
 #### Add Auth into Application
 1. comment out `src/App.js` file part `export default App;`
 2. Uncomment `src/App.js` file part `export default withAuthenticator(App);`
+
+## Terraform to create AppSync and DynamoDB
+
+1. cd appsync_terraform
+2. terraform init
+3. terraform plan
+4. terraform apply
+5. Test AppSync in Front end using test_queries.graphql
