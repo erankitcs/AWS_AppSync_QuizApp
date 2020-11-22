@@ -58,3 +58,9 @@ Simply download the git hub code and run `npm install`
 3. terraform plan
 4. terraform apply
 5. Test AppSync in Front end using test_queries.graphql
+
+## Architecture
+![Screenshot](QuizApp_Arch.jpeg)
+
+## Video Demo
+![Screenshot](https://drive.google.com/file/d/1kMhj19TeeWvP7BRpd8vhqPuOVUSr4jJK/view)
