@@ -63,4 +63,5 @@ Simply download the git hub code and run `npm install`
 ![Screenshot](QuizApp_Arch.jpeg)
 
 ## Video Demo
-![Screenshot](https://drive.google.com/file/d/1kMhj19TeeWvP7BRpd8vhqPuOVUSr4jJK/view)
+![Screenshot]()
+[![Watch the video]](https://drive.google.com/file/d/1kMhj19TeeWvP7BRpd8vhqPuOVUSr4jJK/view)
